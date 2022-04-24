@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario de contacto</title>
+    <link rel="stylesheet" href="./styles/formulario.css" />
+  </head>
+  <body>
+    <nav>
+      <img src="./assets/images/cube-solid.svg" alt="logo" class="nav-logo" />
+
+      <ul>
+        <li>
+          <a href="index.html">Home</a>
+        </li>
+        <li>
+          <a href="">Sobre mí</a>
+        </li>
+        <li>
+          <a href="">Galería</a>
+        </li>
+      </ul>
+    </nav>
+
+    <main class="container">
+      <h1 class="title">Contáctame para más info</h1>
+
+      <form
+        autocomplete="off"
+        action="https://reqres.in/api/users"
+        method="post"
+        class="form"
+      >
+        <label for="fname" class="form__label">Nombre:</label>
+        <input
+          type="text"
+          id="fname"
+          name="user_fname"
+          required
+          class="form__input"
+        />
+
+        <label for="lname" class="form__label">Apellido:</label>
+        <input
+          type="text"
+          id="lname"
+          name="user_lname"
+          required
+          class="form__input"
+        />
+
+        <label for="user" class="form__label">Nombre de usuario:</label>
+        <input
+          type="text"
+          name="user_name"
+          id="user"
+          minlength="5"
+          maxlength="10"
+          placeholder="entre 5 y 10 caracteres"
+          class="form__input"
+        />
+
+        <label for="age" class="form__label">Edad</label>
+        <input
+          type="number"
+          id="age"
+          name="user_age"
+          min="18"
+          class="form__input"
+        />
+
+        <label for="email" class="form__label">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="user_email"
+          pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}"
+          class="form__input"
+        />
+
+        <label for="pwd" class="form__label">Contraseña:</label>
+        <input
+          type="password"
+          id="pwd"
+          name="user_password"
+          placeholder="mínimo 6 caracteres"
+          pattern="[A-Za-z0-9]{6,20}"
+          required
+          class="form__input"
+        />
+
+        <label for="b-date" class="form__label">Fecha de nacimiento:</label>
+        <input type="date" id="b-date" name="user_birth" class="form__input" />
+
+        <label for="city" class="form__label">Ciudad</label>
+        <select name="user_city" id="city" class="form__select">
+          <option value="default" selected disabled hidden class="form__option">
+            Selecciona tu ciudad
+          </option>
+          <option value="mad" class="form__option">Madrid</option>
+          <option value="bcn" class="form__option">Barcelona</option>
+          <option value="val" class="form__option">Valencia</option>
+          <option value="grn" class="form__option">Granada</option>
+        </select>
+
+        <div class="checkbox-container">
+          <label for="vip" class="form__label">¿Quieres ser cliente VIP?</label>
+          <input
+            type="checkbox"
+            id="vip"
+            name="user_vip"
+            class="form__checkbox"
+          />
+        </div>
+
+        <label for="message" class="form__label">Mensaje</label>
+        <textarea
+          name="user_msg"
+          id="message"
+          cols="5"
+          rows="7"
+          class="form__textarea"
+        ></textarea>
+
+        <button type="submit" class="form__btn form__btn--submit">Registrarme</button>
+      </form>
+    </main>
+  </body>
+</html>

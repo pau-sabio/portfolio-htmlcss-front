@@ -42,6 +42,20 @@ ul {
     display: flex;
 }
 
+.menu-icon {
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    .menu-icon {
+        display: inline-block;
+        width: 30px;
+    }
+    nav ul {
+        display: none;
+    }
+}
+
 /* sección 1 */
 
 .section-container {
@@ -77,6 +91,20 @@ ul {
     width: 25%;
     border-radius: 50%;
     border: 15px solid #adb5db;
+}
+
+
+/* 768px o menos */
+@media screen and (max-width: 768px) {
+    .section1 {
+        flex-direction: column;
+    }
+    .section1 div {
+        text-align: center;
+    }
+    .profile-img {
+        width: 40%;
+    }
 }
 
 /* sección 2 -> tabla */
@@ -120,4 +148,78 @@ thead th:nth-child(1) {
 thead th:nth-child(2) {
     width: 30rem;
     padding: 1rem;
+}
+
+/* sección 3 -> gallery */
+
+.gallery {
+    background-color: #fca311;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 100px 20px;
+}
+
+.gallery__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    height: 200px;
+    margin: 20px;
+    border-radius: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+.gallery__item--proyectos {
+    background-image: url(../assets/images/proyectos.jpg);
+}
+
+.gallery__item--portafolio {
+    background-image: url(../assets/images/portafolio.jpg);
+}
+
+.gallery__item--voluntariado {
+    background-image: url(../assets/images/voluntariado.jpg);
+}
+
+.gallery__title {
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+    background-color: rgb(181, 173, 173);
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* footer */
+
+.footer {
+    background-color: #181818;
+    min-height: 100px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer__icons-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.icon {
+    width: 4%;
+    margin-top: 20px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
+.icon:hover {
+    filter: invert(61%) sepia(84%) saturate(834%) hue-rotate(351deg) brightness(102%) contrast(98%);
 }
